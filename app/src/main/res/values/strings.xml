@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">India_COVID19_Tracker</string>
+    <string name="CovidInd">COVID-19\nIndia</string>
+    <string name="TotalCase">Total \nCases</string>
+    <string name="ActiveCase">Active\nCases</string>
+    <string name="RecoveredCase">Recovered\nCases</string>
+    <string name="statewise_result">Statewise Result</string>
+    <string name="select_state">Select Your State</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

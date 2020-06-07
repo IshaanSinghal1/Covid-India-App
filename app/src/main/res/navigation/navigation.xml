@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.india_covid19_tracker.ui.main.MainFragment"
+        android:label="@string/CovidInd"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_stateDataFragment"
+            app:destination="@id/stateDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stateDataFragment"
+        android:name="com.example.india_covid19_tracker.StateDataFragment"
+        android:label="Select Your State" >
+        <action
+            android:id="@+id/action_stateDataFragment_to_stateRecord"
+            app:destination="@id/stateRecord" />
+        <action
+            android:id="@+id/action_stateDataFragment_to_mainFragment"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stateRecord"
+        android:name="com.example.india_covid19_tracker.StateRecord"
+        android:label=" State Stats"
+        tools:layout="@layout/fragment_state_record"
+    >
+        <argument
+            android:name="state_details"
+            app:argType="com.example.india_covid19_tracker.StatewiseItem" />
+        <action
+            android:id="@+id/action_stateRecord_to_stateDataFragment"
+            app:popUpTo="@id/stateDataFragment" />
+    </fragment>
+</navigation>
